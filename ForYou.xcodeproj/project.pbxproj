@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C3A7DC43153B5C1400D09B4D /* 1310000000004997.p12 in Resources */ = {isa = PBXBuildFile; fileRef = C3A7DC42153B5C1400D09B4D /* 1310000000004997.p12 */; };
 		C3FF0F98153A00600000CEA7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3FF0F97153A00600000CEA7 /* UIKit.framework */; };
 		C3FF0F9A153A00600000CEA7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3FF0F99153A00600000CEA7 /* Foundation.framework */; };
 		C3FF0F9C153A00600000CEA7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3FF0F9B153A00600000CEA7 /* CoreGraphics.framework */; };
@@ -21,6 +22,11 @@
 		C3FF0FB8153A00600000CEA7 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3FF0F9D153A00600000CEA7 /* CoreData.framework */; };
 		C3FF0FC0153A00600000CEA7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C3FF0FBE153A00600000CEA7 /* InfoPlist.strings */; };
 		C3FF0FC3153A00600000CEA7 /* ForYouTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C3FF0FC2153A00600000CEA7 /* ForYouTests.m */; };
+		C3FF0FD3153A0A2E0000CEA7 /* SettingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3FF0FD1153A0A2E0000CEA7 /* SettingsController.m */; };
+		C3FF0FD4153A0A2E0000CEA7 /* SettingsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3FF0FD2153A0A2E0000CEA7 /* SettingsController.xib */; };
+		C3FF0FE3153A11030000CEA7 /* AsynchRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = C3FF0FE2153A11030000CEA7 /* AsynchRequest.m */; };
+		C3FF0FE6153A16BE0000CEA7 /* BaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3FF0FE5153A16BE0000CEA7 /* BaseController.m */; };
+		C3FF0FE8153B333C0000CEA7 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3FF0FE7153B333C0000CEA7 /* Security.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C3A7DC42153B5C1400D09B4D /* 1310000000004997.p12 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 1310000000004997.p12; sourceTree = "<group>"; };
 		C3FF0F93153A00600000CEA7 /* ForYou.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ForYou.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3FF0F97153A00600000CEA7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C3FF0F99153A00600000CEA7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -52,6 +59,14 @@
 		C3FF0FBF153A00600000CEA7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C3FF0FC1153A00600000CEA7 /* ForYouTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ForYouTests.h; sourceTree = "<group>"; };
 		C3FF0FC2153A00600000CEA7 /* ForYouTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ForYouTests.m; sourceTree = "<group>"; };
+		C3FF0FD0153A0A2E0000CEA7 /* SettingsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsController.h; sourceTree = "<group>"; };
+		C3FF0FD1153A0A2E0000CEA7 /* SettingsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsController.m; sourceTree = "<group>"; };
+		C3FF0FD2153A0A2E0000CEA7 /* SettingsController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsController.xib; sourceTree = "<group>"; };
+		C3FF0FE1153A11030000CEA7 /* AsynchRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsynchRequest.h; sourceTree = "<group>"; };
+		C3FF0FE2153A11030000CEA7 /* AsynchRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsynchRequest.m; sourceTree = "<group>"; };
+		C3FF0FE4153A16BE0000CEA7 /* BaseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseController.h; sourceTree = "<group>"; };
+		C3FF0FE5153A16BE0000CEA7 /* BaseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseController.m; sourceTree = "<group>"; };
+		C3FF0FE7153B333C0000CEA7 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3FF0FE8153B333C0000CEA7 /* Security.framework in Frameworks */,
 				C3FF0F98153A00600000CEA7 /* UIKit.framework in Frameworks */,
 				C3FF0F9A153A00600000CEA7 /* Foundation.framework in Frameworks */,
 				C3FF0F9C153A00600000CEA7 /* CoreGraphics.framework in Frameworks */,
@@ -80,6 +96,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C3A7DC3C153B500A00D09B4D /* XIB */ = {
+			isa = PBXGroup;
+			children = (
+				C3FF0FD2153A0A2E0000CEA7 /* SettingsController.xib */,
+			);
+			name = XIB;
+			sourceTree = "<group>";
+		};
+		C3A7DC41153B5C0900D09B4D /* P12 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = P12;
+			sourceTree = "<group>";
+		};
 		C3FF0F88153A005F0000CEA7 = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +133,7 @@
 		C3FF0F96153A00600000CEA7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C3FF0FE7153B333C0000CEA7 /* Security.framework */,
 				C3FF0F97153A00600000CEA7 /* UIKit.framework */,
 				C3FF0F99153A00600000CEA7 /* Foundation.framework */,
 				C3FF0F9B153A00600000CEA7 /* CoreGraphics.framework */,
@@ -114,8 +146,16 @@
 		C3FF0F9F153A00600000CEA7 /* ForYou */ = {
 			isa = PBXGroup;
 			children = (
+				C3A7DC41153B5C0900D09B4D /* P12 */,
+				C3FF0FE1153A11030000CEA7 /* AsynchRequest.h */,
+				C3FF0FE2153A11030000CEA7 /* AsynchRequest.m */,
 				C3FF0FA8153A00600000CEA7 /* AppDelegate.h */,
 				C3FF0FA9153A00600000CEA7 /* AppDelegate.m */,
+				C3FF0FE4153A16BE0000CEA7 /* BaseController.h */,
+				C3FF0FE5153A16BE0000CEA7 /* BaseController.m */,
+				C3FF0FD0153A0A2E0000CEA7 /* SettingsController.h */,
+				C3FF0FD1153A0A2E0000CEA7 /* SettingsController.m */,
+				C3A7DC3C153B500A00D09B4D /* XIB */,
 				C3FF0FAB153A00600000CEA7 /* ForYou.xcdatamodeld */,
 				C3FF0FA0153A00600000CEA7 /* Supporting Files */,
 			);
@@ -125,6 +165,7 @@
 		C3FF0FA0153A00600000CEA7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C3A7DC42153B5C1400D09B4D /* 1310000000004997.p12 */,
 				C3FF0FA1153A00600000CEA7 /* ForYou-Info.plist */,
 				C3FF0FA2153A00600000CEA7 /* InfoPlist.strings */,
 				C3FF0FA5153A00600000CEA7 /* main.m */,
@@ -224,6 +265,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3FF0FA4153A00600000CEA7 /* InfoPlist.strings in Resources */,
+				C3FF0FD4153A0A2E0000CEA7 /* SettingsController.xib in Resources */,
+				C3A7DC43153B5C1400D09B4D /* 1310000000004997.p12 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +304,9 @@
 				C3FF0FA6153A00600000CEA7 /* main.m in Sources */,
 				C3FF0FAA153A00600000CEA7 /* AppDelegate.m in Sources */,
 				C3FF0FAD153A00600000CEA7 /* ForYou.xcdatamodeld in Sources */,
+				C3FF0FD3153A0A2E0000CEA7 /* SettingsController.m in Sources */,
+				C3FF0FE3153A11030000CEA7 /* AsynchRequest.m in Sources */,
+				C3FF0FE6153A16BE0000CEA7 /* BaseController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,6 +468,7 @@
 				C3FF0FC8153A00600000CEA7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C3FF0FC9153A00600000CEA7 /* Build configuration list for PBXNativeTarget "ForYouTests" */ = {
 			isa = XCConfigurationList;
@@ -430,6 +477,7 @@
 				C3FF0FCB153A00600000CEA7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
