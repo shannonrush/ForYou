@@ -45,8 +45,11 @@
     if (status == noErr) {                                      // 3
         status = SecTrustEvaluate(myTrust, &trustResult);
     }
-    NSURLCredential *credential = [NSURLCredential credentialWithIdentity:myIdentity certificates:<#(NSArray *)#> persistence:<#(NSURLCredentialPersistence)#>
-    //    [challenge.sender useCredential:credential forAuthenticationChallenge:challenge];
+    SecCertificateRef myCertificate = NULL;
+    status = SecIdentityCopyCertificate (myIdentity,&myCertificate);
+    NSURLCredential *credential = [NSURLCredential credentialForTrust:myTrust];
+//    NSURLCredential *credential = [NSURLCredential credentialWithIdentity:myIdentity certificates:[NSArray arrayWithObject:myCertificate] persistence:NSURLCredentialPersistencePermanent];
+    [challenge.sender useCredential:credential forAuthenticationChallenge:challenge];
 }
 
 OSStatus extractIdentityAndTrust(CFDataRef inPKCS12Data,SecIdentityRef *outIdentity,SecTrustRef *outTrust) {
@@ -112,7 +115,8 @@ OSStatus extractIdentityAndTrust(CFDataRef inPKCS12Data,SecIdentityRef *outIdent
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
     NSError *jsonParsingError = nil;
-    NSDictionary *data = [NSJSONSerialization JSONObjectWithData:responseData options:0 error:&jsonParsingError];        
+   id data = [NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingAllowFragments error:&jsonParsingError];        
+    
     NSLog(@"%@", data);
     [self handleAsynchResponse:data];
 }
