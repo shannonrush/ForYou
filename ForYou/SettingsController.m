@@ -7,6 +7,7 @@
 //
 
 #import "SettingsController.h"
+#import "AsynchRequest.h"
 
 @interface SettingsController ()
 
@@ -28,7 +29,9 @@
 
 -(IBAction)checkStatus:(id)sender {
     [AppDelegate setSenderID:[[sender titleLabel]text]];
-    [self asynchRequest:@"info/json" withMethod:@"GET" withContentType:@"application/x-www-form-urlencoded" withData:nil];
+    AsynchRequest *request = [[AsynchRequest alloc]init];
+    request.controller = self;
+    [request asynchRequest:@"info/json" withMethod:@"GET" withContentType:@"application/x-www-form-urlencoded" withData:nil];
 }
 
 -(void) handleAsynchResponse:(NSDictionary *)data {

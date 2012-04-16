@@ -7,17 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <Security/Security.h>
 #import "AppDelegate.h"
 
-@interface BaseController : UIViewController <NSURLConnectionDelegate> {
-	NSMutableData *responseData;
-}
 
--(void) noConnectionAlert;
--(void) errorAlert:(NSArray *)errors;
--(NSURL *) constructURL:(NSString *)path;
--(void) asynchRequest:(NSString *)path withMethod:(NSString *)method withContentType:(NSString *)contentType withData:(NSString *)data;
--(void) handleAsynchResponse:(NSDictionary *)data;
+@interface BaseController : UIViewController 
+
+
 
 @end
+
+
