@@ -17,7 +17,16 @@
 @synthesize managedObjectModel = __managedObjectModel;
 @synthesize persistentStoreCoordinator = __persistentStoreCoordinator;
 
++(NSString *)senderID {
+    return senderID;
+}
+
++(void)setSenderID:(NSString *)newSenderID {
+    [senderID setString:newSenderID];
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    senderID = [[NSMutableString alloc]init];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.viewController = [[SettingsController alloc] initWithNibName:@"SettingsController" bundle:nil];
     self.window.rootViewController = self.viewController;

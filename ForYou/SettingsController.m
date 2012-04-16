@@ -26,7 +26,8 @@
     // e.g. self.myOutlet = nil;
 }
 
--(IBAction)checkStatus {
+-(IBAction)checkStatus:(id)sender {
+    [AppDelegate setSenderID:[[sender titleLabel]text]];
     [self asynchRequest:@"info/json" withMethod:@"GET" withContentType:@"application/x-www-form-urlencoded" withData:nil];
 }
 

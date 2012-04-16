@@ -9,9 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "BaseController.h"
 
-@interface SettingsController : BaseController {
-}
+@interface SettingsController : BaseController 
 
--(IBAction)checkStatus;
+-(IBAction)checkStatus:(id)sender;
 
 @end

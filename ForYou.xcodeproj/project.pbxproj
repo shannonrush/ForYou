@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		C3A7DC43153B5C1400D09B4D /* 1310000000004997.p12 in Resources */ = {isa = PBXBuildFile; fileRef = C3A7DC42153B5C1400D09B4D /* 1310000000004997.p12 */; };
+		C3D07E0F153BAD21004D7560 /* p12.plist in Resources */ = {isa = PBXBuildFile; fileRef = C3D07E0E153BAD21004D7560 /* p12.plist */; };
+		C3D07E11153BAF3E004D7560 /* 1310000000005002.p12 in Resources */ = {isa = PBXBuildFile; fileRef = C3D07E10153BAF3E004D7560 /* 1310000000005002.p12 */; };
 		C3FF0F98153A00600000CEA7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3FF0F97153A00600000CEA7 /* UIKit.framework */; };
 		C3FF0F9A153A00600000CEA7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3FF0F99153A00600000CEA7 /* Foundation.framework */; };
 		C3FF0F9C153A00600000CEA7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3FF0F9B153A00600000CEA7 /* CoreGraphics.framework */; };
@@ -41,6 +43,8 @@
 
 /* Begin PBXFileReference section */
 		C3A7DC42153B5C1400D09B4D /* 1310000000004997.p12 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 1310000000004997.p12; sourceTree = "<group>"; };
+		C3D07E0E153BAD21004D7560 /* p12.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = p12.plist; sourceTree = "<group>"; };
+		C3D07E10153BAF3E004D7560 /* 1310000000005002.p12 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 1310000000005002.p12; sourceTree = "<group>"; };
 		C3FF0F93153A00600000CEA7 /* ForYou.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ForYou.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3FF0F97153A00600000CEA7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C3FF0F99153A00600000CEA7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -104,13 +108,6 @@
 			name = XIB;
 			sourceTree = "<group>";
 		};
-		C3A7DC41153B5C0900D09B4D /* P12 */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = P12;
-			sourceTree = "<group>";
-		};
 		C3FF0F88153A005F0000CEA7 = {
 			isa = PBXGroup;
 			children = (
@@ -146,7 +143,6 @@
 		C3FF0F9F153A00600000CEA7 /* ForYou */ = {
 			isa = PBXGroup;
 			children = (
-				C3A7DC41153B5C0900D09B4D /* P12 */,
 				C3FF0FE1153A11030000CEA7 /* AsynchRequest.h */,
 				C3FF0FE2153A11030000CEA7 /* AsynchRequest.m */,
 				C3FF0FA8153A00600000CEA7 /* AppDelegate.h */,
@@ -165,11 +161,13 @@
 		C3FF0FA0153A00600000CEA7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				C3A7DC42153B5C1400D09B4D /* 1310000000004997.p12 */,
+				C3D07E10153BAF3E004D7560 /* 1310000000005002.p12 */,
 				C3FF0FA1153A00600000CEA7 /* ForYou-Info.plist */,
 				C3FF0FA2153A00600000CEA7 /* InfoPlist.strings */,
 				C3FF0FA5153A00600000CEA7 /* main.m */,
 				C3FF0FA7153A00600000CEA7 /* ForYou-Prefix.pch */,
+				C3D07E0E153BAD21004D7560 /* p12.plist */,
+				C3A7DC42153B5C1400D09B4D /* 1310000000004997.p12 */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -267,6 +265,8 @@
 				C3FF0FA4153A00600000CEA7 /* InfoPlist.strings in Resources */,
 				C3FF0FD4153A0A2E0000CEA7 /* SettingsController.xib in Resources */,
 				C3A7DC43153B5C1400D09B4D /* 1310000000004997.p12 in Resources */,
+				C3D07E0F153BAD21004D7560 /* p12.plist in Resources */,
+				C3D07E11153BAF3E004D7560 /* 1310000000005002.p12 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

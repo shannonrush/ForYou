@@ -38,16 +38,15 @@
 
 -(void)connection:(NSURLConnection *)connection willSendRequestForAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge {
     NSLog(@"in will send request");
-    NSString *thePath = [[NSBundle mainBundle] pathForResource:@"1310000000004997" ofType:@"p12"];
+    NSString *thePath = [[NSBundle mainBundle] pathForResource:[AppDelegate senderID] ofType:@"p12"];
     NSData *PKCS12Data = [[NSData alloc] initWithContentsOfFile:thePath];
     CFDataRef inPKCS12Data = (__bridge_retained CFDataRef)PKCS12Data; 
     OSStatus status = noErr;
     SecIdentityRef myIdentity;
     SecTrustRef myTrust;
     status = extractIdentityAndTrust(inPKCS12Data,&myIdentity,&myTrust); 
-    // status should be 0
     SecTrustResultType trustResult;
-    if (status == noErr) {                                      // 3
+    if (status == noErr) {                                      
         status = SecTrustEvaluate(myTrust, &trustResult);
     }
     NSMutableArray *myCerts = [NSMutableArray array];
@@ -60,14 +59,16 @@
 }
 
 OSStatus extractIdentityAndTrust(CFDataRef inPKCS12Data,SecIdentityRef *outIdentity,SecTrustRef *outTrust) {
+    NSString *p12PListPath = [[NSBundle mainBundle] pathForResource:@"p12" ofType:@"plist"];
+    NSDictionary *p12Dict = [NSDictionary dictionaryWithContentsOfFile:p12PListPath];
+    CFStringRef password = (__bridge CFStringRef)[p12Dict valueForKey:[AppDelegate senderID]];
     OSStatus securityError = errSecSuccess;
-    CFStringRef password = CFSTR("9MAEyq3B");
     const void *keys[] =   { kSecImportExportPassphrase };
     const void *values[] = { password };
     CFDictionaryRef optionsDictionary = CFDictionaryCreate(NULL, keys, values, 1, NULL, NULL);  
     CFArrayRef items = CFArrayCreate(NULL, 0, 0, NULL);
     securityError = SecPKCS12Import(inPKCS12Data,optionsDictionary,&items);
-    if (securityError == 0) {                                   // 8
+    if (securityError == 0) {                                   
         CFDictionaryRef myIdentityAndTrust = CFArrayGetValueAtIndex (items, 0);
         const void *tempIdentity = NULL;
         tempIdentity = CFDictionaryGetValue (myIdentityAndTrust,kSecImportItemIdentity);
@@ -122,8 +123,6 @@ OSStatus extractIdentityAndTrust(CFDataRef inPKCS12Data,SecIdentityRef *outIdent
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
     NSError *jsonParsingError = nil;
-//    NSString *responseString = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
-//    NSLog(responseString);
     NSDictionary *data = [NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingAllowFragments error:&jsonParsingError];        
     NSLog(@"%@", data);
 //    [self handleAsynchResponse:data];

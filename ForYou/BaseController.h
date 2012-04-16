@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <Security/Security.h>
+#import "AppDelegate.h"
 
 @interface BaseController : UIViewController <NSURLConnectionDelegate> {
 	NSMutableData *responseData;
