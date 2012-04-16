@@ -9,7 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "BaseController.h"
 
-@interface SettingsController : BaseController 
+@interface SettingsController : BaseController {
+    IBOutlet UILabel *idLabel;
+    IBOutlet UILabel *balanceLabel;
+}
 
 -(IBAction)checkStatus:(id)sender;
 

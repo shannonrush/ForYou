@@ -31,6 +31,16 @@
     [self asynchRequest:@"info/json" withMethod:@"GET" withContentType:@"application/x-www-form-urlencoded" withData:nil];
 }
 
+-(void) handleAsynchResponse:(NSDictionary *)data {
+    if ([[data allKeys]containsObject:@"balance"])
+        [self displayBalance:data];
+}
+
+-(void)displayBalance:(NSDictionary *)data {
+    idLabel.text = [NSString stringWithFormat:@"MintChip ID: %@",[data valueForKey:@"id"]];
+    balanceLabel.text = [NSString stringWithFormat:@"Balance: %@",[data valueForKey:@"balance"]];
+}
+
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }

@@ -125,7 +125,7 @@ OSStatus extractIdentityAndTrust(CFDataRef inPKCS12Data,SecIdentityRef *outIdent
     NSError *jsonParsingError = nil;
     NSDictionary *data = [NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingAllowFragments error:&jsonParsingError];        
     NSLog(@"%@", data);
-//    [self handleAsynchResponse:data];
+    [self handleAsynchResponse:data];
 }
 
 @end
