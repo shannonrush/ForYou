@@ -31,6 +31,11 @@
     [alert show];
 }
 
+-(BOOL)connection:(NSURLConnection *)connection canAuthenticateAgainstProtectionSpace:(NSURLProtectionSpace *)protectionSpace {
+    NSLog(@"in can auth against protection space");
+    return YES;
+}
+
 -(void)connection:(NSURLConnection *)connection willSendRequestForAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge {
     NSLog(@"in will send request");
     NSString *thePath = [[NSBundle mainBundle] pathForResource:@"1310000000004997" ofType:@"p12"];
@@ -45,10 +50,12 @@
     if (status == noErr) {                                      // 3
         status = SecTrustEvaluate(myTrust, &trustResult);
     }
-    SecCertificateRef myCertificate = NULL;
-    status = SecIdentityCopyCertificate (myIdentity,&myCertificate);
-    NSURLCredential *credential = [NSURLCredential credentialForTrust:myTrust];
-//    NSURLCredential *credential = [NSURLCredential credentialWithIdentity:myIdentity certificates:[NSArray arrayWithObject:myCertificate] persistence:NSURLCredentialPersistencePermanent];
+    NSMutableArray *myCerts = [NSMutableArray array];
+    int numTrusts = SecTrustGetCertificateCount(myTrust);
+	for (int i=0; i<numTrusts; i++) {
+		[myCerts addObject:(__bridge id)SecTrustGetCertificateAtIndex(myTrust, i)];
+	}
+    NSURLCredential *credential = [NSURLCredential credentialWithIdentity:myIdentity certificates:myCerts persistence:NSURLCredentialPersistencePermanent];
     [challenge.sender useCredential:credential forAuthenticationChallenge:challenge];
 }
 
@@ -115,10 +122,11 @@ OSStatus extractIdentityAndTrust(CFDataRef inPKCS12Data,SecIdentityRef *outIdent
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
     NSError *jsonParsingError = nil;
-   id data = [NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingAllowFragments error:&jsonParsingError];        
-    
+//    NSString *responseString = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
+//    NSLog(responseString);
+    NSDictionary *data = [NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingAllowFragments error:&jsonParsingError];        
     NSLog(@"%@", data);
-    [self handleAsynchResponse:data];
+//    [self handleAsynchResponse:data];
 }
 
 @end
