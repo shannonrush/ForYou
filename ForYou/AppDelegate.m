@@ -8,11 +8,15 @@
 
 #import "AppDelegate.h"
 #import "SettingsController.h"
+#import "LocatorController.h"
+#import "PaymentsController.h"
+#import "ProfileController.h"
 
 @implementation AppDelegate
 
 @synthesize window = _window;
-@synthesize viewController = _viewController;
+@synthesize tabBarController = _tabBarController;
+
 @synthesize managedObjectContext = __managedObjectContext;
 @synthesize managedObjectModel = __managedObjectModel;
 @synthesize persistentStoreCoordinator = __persistentStoreCoordinator;
@@ -28,8 +32,14 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     senderID = [[NSMutableString alloc]init];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.viewController = [[SettingsController alloc] initWithNibName:@"SettingsController" bundle:nil];
-    self.window.rootViewController = self.viewController;
+    UIViewController *locator = [[LocatorController alloc] initWithNibName:@"LocatorController" bundle:nil];
+    UIViewController *settings = [[SettingsController alloc] initWithNibName:@"SettingsController" bundle:nil];
+    UIViewController *payments = [[PaymentsController alloc]initWithNibName:@"PaymentsController" bundle:nil];
+    UIViewController *profile = [[ProfileController alloc]initWithNibName:@"ProfileController" bundle:nil];
+    self.tabBarController = [[UITabBarController alloc] init];
+    [[UITabBar appearance]setBackgroundImage:[UIImage imageNamed:@"tabbg"]];
+    self.tabBarController.viewControllers = [NSArray arrayWithObjects:locator, payments, settings, profile, nil];
+    self.window.rootViewController = self.tabBarController;
     [self.window makeKeyAndVisible];
     return YES;
 }

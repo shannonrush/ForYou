@@ -9,17 +9,22 @@
 #import <UIKit/UIKit.h>
 #import <Security/Security.h>
 #import "AppDelegate.h"
+#import "NSData+Additions.h"
+#import "Conversion.h"
 
 @interface AsynchRequest : UIViewController <NSURLConnectionDelegate> {
 	NSMutableData *responseData;
-    UIViewController *controller;
+    NSHTTPURLResponse *httpResponse;
 }
 
 @property(nonatomic) UIViewController *controller;
+@property(nonatomic) NSString *requestType;
 
 -(void) noConnectionAlert;
 -(NSURL *) constructURL:(NSString *)path;
 -(void) asynchRequest:(NSString *)path withMethod:(NSString *)method withContentType:(NSString *)contentType withData:(NSString *)data;
+-(void) responseRequest:(NSData *)data;
+
 
 
 @end

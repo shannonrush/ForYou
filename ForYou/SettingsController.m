@@ -15,6 +15,14 @@
 
 @implementation SettingsController
 
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        self.tabBarItem.title = @" My MintChip";
+    }
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -32,6 +40,14 @@
     AsynchRequest *request = [[AsynchRequest alloc]init];
     request.controller = self;
     [request asynchRequest:@"info/json" withMethod:@"GET" withContentType:@"application/x-www-form-urlencoded" withData:nil];
+    
+    // tmp log request
+    //    GET /mintchip/payments/{startindex}/{stopindex}/{responseformat}
+//    [request asynchRequest:@"payments/0/20/json" withMethod:@"GET" withContentType:@"application/x-www-form-urlencoded" withData:nil];
+    
+    // tmp receipts request
+//    GET /mintchip/receipts/{startindex}/{stopindex}/{responseformat}
+//   [request asynchRequest:@"receipts/0/20/json" withMethod:@"GET" withContentType:@"application/x-www-form-urlencoded" withData:nil];
 }
 
 -(void) handleAsynchResponse:(NSDictionary *)data {

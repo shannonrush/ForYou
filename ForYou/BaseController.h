@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
-
+#import "AsynchRequest.h"
 
 @interface BaseController : UIViewController 
 

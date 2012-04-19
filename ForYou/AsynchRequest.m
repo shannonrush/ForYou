@@ -9,7 +9,17 @@
 
 @implementation AsynchRequest
 
-@synthesize controller;
+@synthesize controller,requestType;
+
+-(void) responseRequest:(NSData *)data {
+    responseData = [NSMutableData data];
+    NSURL *url = [self constructURL:@"receipts"];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+    [request setHTTPBody:data];
+    [request setHTTPMethod:@"POST"];
+    [request setValue:@"application/vnd.scg.ecn-message" forHTTPHeaderField:@"content-type"];
+    [[NSURLConnection alloc] initWithRequest:request delegate:self];
+}
 
 -(void) asynchRequest:(NSString *)path withMethod:(NSString *)method withContentType:(NSString *)contentType withData:(NSString *)dataString {
     responseData = [NSMutableData data];
@@ -105,10 +115,19 @@ OSStatus extractIdentityAndTrust(CFDataRef inPKCS12Data,SecIdentityRef *outIdent
 }
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
-    NSError *jsonParsingError = nil;
-    NSDictionary *data = [NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingAllowFragments error:&jsonParsingError];        
-    NSLog(@"%@", data);
-    [self.controller handleAsynchResponse:data];
+    if ([self.requestType isEqualToString:@"transfer"]) {
+        [AppDelegate setSenderID:@"1310000000004997"];
+        AsynchRequest *request = [[AsynchRequest alloc]init];
+        self.requestType = @"response";
+        [request responseRequest:responseData];
+    } else if ([self.requestType isEqualToString:@"response"]) {
+        NSLog(@"in response finished");
+    }else {
+        NSError *jsonParsingError = nil;
+        NSDictionary *data = [NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingAllowFragments error:&jsonParsingError];    
+        NSLog(@"%@", data);
+        [self.controller handleAsynchResponse:data];
+    }
 }
 
 

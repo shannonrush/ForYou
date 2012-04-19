@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C30E2916153F3A9D00E4A07D /* NSData+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = C30E2915153F3A9D00E4A07D /* NSData+Additions.m */; };
+		C30E2919153F3AEC00E4A07D /* Conversion.m in Sources */ = {isa = PBXBuildFile; fileRef = C30E2918153F3AEC00E4A07D /* Conversion.m */; };
+		C30E29221540A94300E4A07D /* LocatorController.m in Sources */ = {isa = PBXBuildFile; fileRef = C30E29201540A94200E4A07D /* LocatorController.m */; };
+		C30E29231540A94300E4A07D /* LocatorController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C30E29211540A94200E4A07D /* LocatorController.xib */; };
+		C30E29271540AA6500E4A07D /* PaymentsController.m in Sources */ = {isa = PBXBuildFile; fileRef = C30E29251540AA6400E4A07D /* PaymentsController.m */; };
+		C30E29281540AA6500E4A07D /* PaymentsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C30E29261540AA6400E4A07D /* PaymentsController.xib */; };
+		C30E292C1540AB0800E4A07D /* ProfileController.m in Sources */ = {isa = PBXBuildFile; fileRef = C30E292A1540AB0700E4A07D /* ProfileController.m */; };
+		C30E292D1540AB0800E4A07D /* ProfileController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C30E292B1540AB0800E4A07D /* ProfileController.xib */; };
+		C30E29361540C2BA00E4A07D /* tabbg.png in Resources */ = {isa = PBXBuildFile; fileRef = C30E29351540C2BA00E4A07D /* tabbg.png */; };
+		C33A6E33153C900A00D61EB6 /* TransferController.m in Sources */ = {isa = PBXBuildFile; fileRef = C33A6E31153C900A00D61EB6 /* TransferController.m */; };
+		C33A6E34153C900A00D61EB6 /* TransferController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C33A6E32153C900A00D61EB6 /* TransferController.xib */; };
 		C3A7DC43153B5C1400D09B4D /* 1310000000004997.p12 in Resources */ = {isa = PBXBuildFile; fileRef = C3A7DC42153B5C1400D09B4D /* 1310000000004997.p12 */; };
 		C3D07E0F153BAD21004D7560 /* p12.plist in Resources */ = {isa = PBXBuildFile; fileRef = C3D07E0E153BAD21004D7560 /* p12.plist */; };
 		C3D07E11153BAF3E004D7560 /* 1310000000005002.p12 in Resources */ = {isa = PBXBuildFile; fileRef = C3D07E10153BAF3E004D7560 /* 1310000000005002.p12 */; };
@@ -42,6 +53,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C30E2914153F3A9D00E4A07D /* NSData+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Additions.h"; sourceTree = "<group>"; };
+		C30E2915153F3A9D00E4A07D /* NSData+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Additions.m"; sourceTree = "<group>"; };
+		C30E2917153F3AEC00E4A07D /* Conversion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Conversion.h; sourceTree = "<group>"; };
+		C30E2918153F3AEC00E4A07D /* Conversion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Conversion.m; sourceTree = "<group>"; };
+		C30E291F1540A94100E4A07D /* LocatorController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocatorController.h; sourceTree = "<group>"; };
+		C30E29201540A94200E4A07D /* LocatorController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocatorController.m; sourceTree = "<group>"; };
+		C30E29211540A94200E4A07D /* LocatorController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LocatorController.xib; sourceTree = "<group>"; };
+		C30E29241540AA6400E4A07D /* PaymentsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaymentsController.h; sourceTree = "<group>"; };
+		C30E29251540AA6400E4A07D /* PaymentsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaymentsController.m; sourceTree = "<group>"; };
+		C30E29261540AA6400E4A07D /* PaymentsController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PaymentsController.xib; sourceTree = "<group>"; };
+		C30E29291540AB0700E4A07D /* ProfileController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileController.h; sourceTree = "<group>"; };
+		C30E292A1540AB0700E4A07D /* ProfileController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileController.m; sourceTree = "<group>"; };
+		C30E292B1540AB0800E4A07D /* ProfileController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileController.xib; sourceTree = "<group>"; };
+		C30E29351540C2BA00E4A07D /* tabbg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbg.png; sourceTree = "<group>"; };
+		C33A6E30153C900A00D61EB6 /* TransferController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransferController.h; sourceTree = "<group>"; };
+		C33A6E31153C900A00D61EB6 /* TransferController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransferController.m; sourceTree = "<group>"; };
+		C33A6E32153C900A00D61EB6 /* TransferController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TransferController.xib; sourceTree = "<group>"; };
 		C3A7DC42153B5C1400D09B4D /* 1310000000004997.p12 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 1310000000004997.p12; sourceTree = "<group>"; };
 		C3D07E0E153BAD21004D7560 /* p12.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = p12.plist; sourceTree = "<group>"; };
 		C3D07E10153BAF3E004D7560 /* 1310000000005002.p12 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 1310000000005002.p12; sourceTree = "<group>"; };
@@ -100,10 +128,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C30E291A153F3AFD00E4A07D /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				C30E2914153F3A9D00E4A07D /* NSData+Additions.h */,
+				C30E2915153F3A9D00E4A07D /* NSData+Additions.m */,
+				C30E2917153F3AEC00E4A07D /* Conversion.h */,
+				C30E2918153F3AEC00E4A07D /* Conversion.m */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		C30E292E1540BF2000E4A07D /* images */ = {
+			isa = PBXGroup;
+			children = (
+				C30E29351540C2BA00E4A07D /* tabbg.png */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
 		C3A7DC3C153B500A00D09B4D /* XIB */ = {
 			isa = PBXGroup;
 			children = (
+				C30E29261540AA6400E4A07D /* PaymentsController.xib */,
+				C30E29211540A94200E4A07D /* LocatorController.xib */,
 				C3FF0FD2153A0A2E0000CEA7 /* SettingsController.xib */,
+				C33A6E32153C900A00D61EB6 /* TransferController.xib */,
+				C30E292B1540AB0800E4A07D /* ProfileController.xib */,
 			);
 			name = XIB;
 			sourceTree = "<group>";
@@ -143,16 +194,25 @@
 		C3FF0F9F153A00600000CEA7 /* ForYou */ = {
 			isa = PBXGroup;
 			children = (
+				C30E292E1540BF2000E4A07D /* images */,
 				C3FF0FE1153A11030000CEA7 /* AsynchRequest.h */,
 				C3FF0FE2153A11030000CEA7 /* AsynchRequest.m */,
 				C3FF0FA8153A00600000CEA7 /* AppDelegate.h */,
 				C3FF0FA9153A00600000CEA7 /* AppDelegate.m */,
 				C3FF0FE4153A16BE0000CEA7 /* BaseController.h */,
 				C3FF0FE5153A16BE0000CEA7 /* BaseController.m */,
+				C30E291F1540A94100E4A07D /* LocatorController.h */,
+				C30E29201540A94200E4A07D /* LocatorController.m */,
+				C30E29241540AA6400E4A07D /* PaymentsController.h */,
+				C30E29251540AA6400E4A07D /* PaymentsController.m */,
 				C3FF0FD0153A0A2E0000CEA7 /* SettingsController.h */,
 				C3FF0FD1153A0A2E0000CEA7 /* SettingsController.m */,
+				C30E29291540AB0700E4A07D /* ProfileController.h */,
+				C30E292A1540AB0700E4A07D /* ProfileController.m */,
+				C33A6E30153C900A00D61EB6 /* TransferController.h */,
+				C33A6E31153C900A00D61EB6 /* TransferController.m */,
+				C30E291A153F3AFD00E4A07D /* Helpers */,
 				C3A7DC3C153B500A00D09B4D /* XIB */,
-				C3FF0FAB153A00600000CEA7 /* ForYou.xcdatamodeld */,
 				C3FF0FA0153A00600000CEA7 /* Supporting Files */,
 			);
 			path = ForYou;
@@ -161,6 +221,7 @@
 		C3FF0FA0153A00600000CEA7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C3FF0FAB153A00600000CEA7 /* ForYou.xcdatamodeld */,
 				C3D07E10153BAF3E004D7560 /* 1310000000005002.p12 */,
 				C3FF0FA1153A00600000CEA7 /* ForYou-Info.plist */,
 				C3FF0FA2153A00600000CEA7 /* InfoPlist.strings */,
@@ -267,6 +328,11 @@
 				C3A7DC43153B5C1400D09B4D /* 1310000000004997.p12 in Resources */,
 				C3D07E0F153BAD21004D7560 /* p12.plist in Resources */,
 				C3D07E11153BAF3E004D7560 /* 1310000000005002.p12 in Resources */,
+				C33A6E34153C900A00D61EB6 /* TransferController.xib in Resources */,
+				C30E29231540A94300E4A07D /* LocatorController.xib in Resources */,
+				C30E29281540AA6500E4A07D /* PaymentsController.xib in Resources */,
+				C30E292D1540AB0800E4A07D /* ProfileController.xib in Resources */,
+				C30E29361540C2BA00E4A07D /* tabbg.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,6 +373,12 @@
 				C3FF0FD3153A0A2E0000CEA7 /* SettingsController.m in Sources */,
 				C3FF0FE3153A11030000CEA7 /* AsynchRequest.m in Sources */,
 				C3FF0FE6153A16BE0000CEA7 /* BaseController.m in Sources */,
+				C33A6E33153C900A00D61EB6 /* TransferController.m in Sources */,
+				C30E2916153F3A9D00E4A07D /* NSData+Additions.m in Sources */,
+				C30E2919153F3AEC00E4A07D /* Conversion.m in Sources */,
+				C30E29221540A94300E4A07D /* LocatorController.m in Sources */,
+				C30E29271540AA6500E4A07D /* PaymentsController.m in Sources */,
+				C30E292C1540AB0800E4A07D /* ProfileController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
