@@ -16,6 +16,8 @@
 		C30E292C1540AB0800E4A07D /* ProfileController.m in Sources */ = {isa = PBXBuildFile; fileRef = C30E292A1540AB0700E4A07D /* ProfileController.m */; };
 		C30E292D1540AB0800E4A07D /* ProfileController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C30E292B1540AB0800E4A07D /* ProfileController.xib */; };
 		C30E29361540C2BA00E4A07D /* tabbg.png in Resources */ = {isa = PBXBuildFile; fileRef = C30E29351540C2BA00E4A07D /* tabbg.png */; };
+		C30E29391540D07300E4A07D /* textbg.png in Resources */ = {isa = PBXBuildFile; fileRef = C30E29371540D07300E4A07D /* textbg.png */; };
+		C30E293A1540D07300E4A07D /* textbg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C30E29381540D07300E4A07D /* textbg@2x.png */; };
 		C33A6E33153C900A00D61EB6 /* TransferController.m in Sources */ = {isa = PBXBuildFile; fileRef = C33A6E31153C900A00D61EB6 /* TransferController.m */; };
 		C33A6E34153C900A00D61EB6 /* TransferController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C33A6E32153C900A00D61EB6 /* TransferController.xib */; };
 		C3A7DC43153B5C1400D09B4D /* 1310000000004997.p12 in Resources */ = {isa = PBXBuildFile; fileRef = C3A7DC42153B5C1400D09B4D /* 1310000000004997.p12 */; };
@@ -67,6 +69,8 @@
 		C30E292A1540AB0700E4A07D /* ProfileController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileController.m; sourceTree = "<group>"; };
 		C30E292B1540AB0800E4A07D /* ProfileController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileController.xib; sourceTree = "<group>"; };
 		C30E29351540C2BA00E4A07D /* tabbg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbg.png; sourceTree = "<group>"; };
+		C30E29371540D07300E4A07D /* textbg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = textbg.png; sourceTree = "<group>"; };
+		C30E29381540D07300E4A07D /* textbg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "textbg@2x.png"; sourceTree = "<group>"; };
 		C33A6E30153C900A00D61EB6 /* TransferController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransferController.h; sourceTree = "<group>"; };
 		C33A6E31153C900A00D61EB6 /* TransferController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransferController.m; sourceTree = "<group>"; };
 		C33A6E32153C900A00D61EB6 /* TransferController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TransferController.xib; sourceTree = "<group>"; };
@@ -142,6 +146,8 @@
 		C30E292E1540BF2000E4A07D /* images */ = {
 			isa = PBXGroup;
 			children = (
+				C30E29371540D07300E4A07D /* textbg.png */,
+				C30E29381540D07300E4A07D /* textbg@2x.png */,
 				C30E29351540C2BA00E4A07D /* tabbg.png */,
 			);
 			name = images;
@@ -333,6 +339,8 @@
 				C30E29281540AA6500E4A07D /* PaymentsController.xib in Resources */,
 				C30E292D1540AB0800E4A07D /* ProfileController.xib in Resources */,
 				C30E29361540C2BA00E4A07D /* tabbg.png in Resources */,
+				C30E29391540D07300E4A07D /* textbg.png in Resources */,
+				C30E293A1540D07300E4A07D /* textbg@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
